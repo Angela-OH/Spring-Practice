@@ -1,10 +1,13 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.*;
 
 // MemberRepository의 구현 클래스
+//@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>(); // 실무에서는 ConcurrentHashMap 사용 (thread-safe하게 사용하기 위해)
