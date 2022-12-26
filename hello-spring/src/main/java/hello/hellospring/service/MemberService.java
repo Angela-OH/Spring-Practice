@@ -24,7 +24,7 @@ public class MemberService {
     // 회원가입
     // 비즈니스 로직: 같은 이름이 있는 중복회원 허용 x
     public Long join(Member member) {
-        validateDuplicateMember(member); // 중복회원 검증
+        validateDuplicateMember(member);
         memberRepository.save(member);
         return member.getId();
     }
